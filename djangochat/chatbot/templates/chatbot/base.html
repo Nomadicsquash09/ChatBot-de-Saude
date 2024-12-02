@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  {% include 'chatbot/partials/_head.html' %}
+  {% block additional_head %}{% endblock additional_head %}
+</head>
+<body>
+    {% include "chatbot/partials/_nav.html" %}
+    {% include "chatbot/partials/_preset.html" %}
+    {% block content %}{% endblock content %}
+    {% include "chatbot/partials/_contact.html" %}
+    {% include "chatbot/partials/_footer.html" %}
+</body>
+</html>

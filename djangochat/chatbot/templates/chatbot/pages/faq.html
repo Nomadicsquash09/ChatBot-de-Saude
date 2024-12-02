@@ -1,0 +1,21 @@
+{% extends 'chatbot/base.html' %}
+
+{% block content %}
+    <div class="faq-container">
+        <h1>Perguntas Frequentes</h1>
+
+        {% if questions_and_answers %}
+            <div class="faq-list">
+                {% for item in questions_and_answers %}
+                    <div class="faq-item">
+                        <h3>{{ item.question }}</h3>
+                        <p class="faq-response"><strong>Resposta:</strong> {{ item.response }}</p>
+                        <p class="similar-questions">{{ item.count }} Perguntas Similares</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>Não há perguntas frequentes ainda.</p>
+        {% endif %}
+    </div>
+{% endblock content %}
